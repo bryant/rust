@@ -1,4 +1,4 @@
-// Copyright 2014 The Rust Project Developers. See the COPYRIGHT
+// Copyright 2017 The Rust Project Developers. See the COPYRIGHT
 // file at the top-level directory of this distribution and at
 // http://rust-lang.org/COPYRIGHT.
 //
@@ -8,10 +8,7 @@
 // option. This file may not be copied, modified, or distributed
 // except according to those terms.
 
-// compile-flags: -Z parse-only
-
-fn main() {
-    let y = 0;
-    //~^ ERROR unknown start of token: \u{37e}
-    //~^^ HELP unicode character ';' (Greek Question Mark) looks like ';' (Semicolon), but it's not
+#[repr(u8)]
+pub enum E {
+    B = 1 as u8,
 }
